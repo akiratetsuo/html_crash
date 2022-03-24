@@ -1,0 +1,1 @@
+console.log("The first one to stop clapping, shall be executed!")
