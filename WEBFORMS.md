@@ -1,95 +1,83 @@
-# WEB FORMS 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Forms</title>
+  </head>
+  <body>
+    <h1>Web Forms</h1>
+    <form>
+      <label for="username">enter username: </label>
+      <input
+        type="text id"
+        id="username"
+        name="username"
+        placeholder="username"
+      />
+      <br />
+      <br />
+      <label for="email"> enter email: </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@email.com"
+      />
 
+      <br /><br />
+      <label for="password" id="password">Enter your password: </label>
+      <!-- dont use label because it is associated with particular input field nju87 -->
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="choose a password"
+      />
 
-
-web forms 
-- capture user information 
-- normally composed input fields so user can input information  
-```html 
-<input type=" " >
-```
-## Form Tag 
-- inside form tag is where all input field go 
-```html
-<form action=" TELLS WEB BROWSER WHAT TO DO WHEN FORM IS SUBMITTED" >
-```
-
-- Action Attribute 
-    - has to do with PHP and server-side data 
-
-
-- type attribute = text
-    - single line of text 
-``` html
-<form>
-    <input type="text">
-</form>
-```
-
-type attribute 
-- selects type of user input 
-
-id attribute 
-- value must be unique 
-- no other element can have same id 
-- link id tag to label tag 
-
-label tag 
-- tells user what to type into input field 
-- link id tag to label tag 
-- for attribute 
-  - what input field is this label for 
-  - for attribute inside label links to the id attribute inside input field 
-  - associate label with input field via for attribute in label and id attribute in input field 
-  - 
-
-``` html
-<form>
-    <label for="username" > content </label>
-    <!-- for attribute - what input field is this label for -->
-    <input type="text" id="username" name="username"> 
-    
-    <label for="email"> enter email: </label>
-    <input type="email" id="email" name="email"> 
-
-    <label for="password"> enter password: </label>
-    <input type="password" id="password" name="password">
-
-</form>
-```
-input type email
-- web browser interpret field as emial 
-- web browser checks if valid email 
-
-input type password
-- hide what user types into field 
-
-name attribute 
-- like id attribute 
-- used for server-side processing 
-- <strong> web server get value from input field </strong>
-- good idea to include name attribute for backend developer 
-- give id same value as name attribute 
-- <strong> also group different parts of web forms together ie: radio button</strong>
-``` html
-<label for> </label>
-<>
-```
-radio button
-- allows user to click only one of several options 
-- when user clicks radio button, it becomes checked, and all other radio buttons with equal name become unchecked. 
-- <strong> name attribute important when grouping together radio button name fields </strong>
-- value tag 
-  - so server can see value submitted user selected, unlike input type="" where user species type 
-``` html
-<form action="">
-<input type="radio" name="gender" value="male" > Male <br>
-
-<input type="radio" name="gender" value="female" > Female <br>
-<input type="radio" name="gender" value="other" > Other <br>
-
-<!-- name tag in radio buttons all set to same value  -->
-</form>
-```
+      <p>Select your age:</p>
+      <!-- name attribute groups all radio button together for server-side -->
+      <input type="radio" name="age" value="0-25" id="" option-1 />
+      <label for="option-1"> 0-25</label>
+      <br />
+      <input type="radio" name="age" value="25-50" id="option-2" />
+      <label for="option-2"> 25-50 </label>
+      <br />
+      <input type="radio" name="age" value="50-65" id="option-3" required />
+      <!-- this is so user can see what they select -->
+      <label for="option-3">50-65</label>
+      <br />
+      <br />
+      <label for="question">Security questions: </label>
+      <select name="question" id="question">
+        <option value="q1">
+          What color are your favorite pair of giraffes?
+        </option>
+        <option value="q2">
+          If you could be a fruit, what vegetable would it be?
+        </option>
+        <option value="q3">
+          Tell me where you live, so I can move into your house.
+        </option>
+      </select>
+      <br /><br />
+      <label for="answer"> Security question answer:</label>
+      <input type="text" id="answer" name="answer" />
+      <br /><br />
+      <label for="bio">Your bio: </label>
+      <br />
+      <textarea
+        name="bio"
+        id="bio"
+        cols="30"
+        rows="10"
+        placeholder="about my favorite boo..."
+      ></textarea>
+      <br /><br />
+      <input type="submit" value="submit the button" />
+    </form>
+  </body>
+</html>
 
 
